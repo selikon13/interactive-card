@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="css/card-style.css">
+  <link rel="stylesheet" href="css/adaptive-style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <script type="module" src="./javascript/main.js"></script>
+</head>
+
+<body>
+  <div class="all-card">
+    <div class="ru-label" id="ru-label" data-i18n="ru-label">EN</div>
+    <div class="main-desktop">
+      <img src="images/bg-main-desktop.png" alt="desktop">
+    </div>
+
+    <section class="card-section">
+      <section class="card-img">
+        <div class="card-img-front">
+          <img src="images/bg-card-front.png" alt="front-card">
+        </div>
+        <div class="card-img-back">
+          <img src="images/bg-card-back.png" alt="back-card">
+        </div>
+
+      </section>
+      <section class="card">
+        <div class="number-card" id="number-card">
+          0000 0000 0000 0000
+        </div>
+        <div class="name-date-cvc-container">
+          <div class="name-user" id="name-user" data-i18n="name-user-card">
+            JANE APPLESEED
+          </div>
+          <div class="date-card" id="date-card">
+            00/00
+          </div>
+          <div class="cvc-card" id="cvc-card">
+            000
+          </div>
+        </div>
+      </section>
+    </section>
+    <form class="input-fields">
+      <section class="card-input">
+
+        <label for="cardholder-name-input" data-i18n="cardholder-name-label">Cardholder Name</label>
+        <input class="input-table-name" type="text" placeholder="e.g. Jane Appleseed" id="cardholder-name-input"
+          data-i18n-placeholder="cardholder-name-inpute-label">
+        <div class="error-message" id="error-name"></div>
+
+        <label for="card-number-input" data-i18n="card-number-label">Card Number</label>
+        <input class="input-table-card" type="text" placeholder="e.g. 1234 5678 9123 0000" id="card-number-input"
+          data-i18n-placeholder="card-number-placeholder">
+        <div class="error-message" id="error-number"></div>
+
+        <div class="date-cvc-container">
+          <div class="expiry-container">
+            <label for="expiry-month-input" data-i18n="expiry-date-label">Exp. Date (MM/YY)</label>
+
+            <div class="expiry-inputs">
+              <input class="input-table-month" type="number" id="expiry-month-input"
+                data-i18n-placeholder="expiry-month-placeholder">
+              <input class="input-table-year" type="number" id="expiry-year-input"
+                data-i18n-placeholder="expiry-year-placeholder">
+            </div>
+
+            <div class="error-message" id="error-date"></div>
+          </div>
+          <div>
+
+            <label for="cvc-input" data-i18n="cvc-label">CVC</label>
+            <input class="input-table-cvc" type="number" placeholder="e.g. 123" id="cvc-input"
+              data-i18n-placeholder="cvc-placeholder">
+            <div class="error-message" id="error-cvc"></div>
+
+          </div>
+        </div>
+      </section>
+
+      <button class="confirm-button" type="submit" data-i18n="confirm-button">
+        Confirm
+      </button>
+
+    </form>
+    <section class="thk-text" id="thk-text">
+      <h2 data-i18n="thank-you-title">Thank you!</h2>
+      <p data-i18n="thank-you-message">We've added your card details</p>
+      <button class="continue-btn" data-i18n="continue-button">Continue</button>
+    </section>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/selikon13">Eduard</a>.
+  </div>
+</body>
+
+</html>

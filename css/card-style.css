@@ -1,0 +1,327 @@
+:root {
+    --letters: white;
+    --warning: red;
+    --button: #220930;
+    --function: black;
+    --base-font-size: 15px;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+}
+
+body {
+    font-family: 'Space grotesk', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    font-size: var(--base-font-size);
+    overflow: hidden;
+}
+
+/* === card  === */
+
+.all-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 5vw;
+}
+
+.card-img {
+    margin: 10vh 1.5vw 1.5vw 1.5vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0;
+}
+
+.card-img div {
+    margin-bottom: var(--space-md);
+}
+
+.card-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card,
+.card-input {
+    z-index: 1;
+    margin: 20px;
+    width: 100%;
+}
+
+.card-img-front {
+    margin-left: 4vw;
+    position: relative;
+}
+
+.card-img-back {
+    margin-left: 6vw;
+}
+
+.card {
+    position: relative;
+    z-index: 2;
+    transform: translate(3%, -580%);
+    width: auto;
+    color: var(--letters);
+    padding: var(--space-md);
+}
+
+.number-card {
+    text-align: center;
+    letter-spacing: 0.2vw;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: var(--space-sm);
+}
+
+.date-card {
+    position: absolute;
+    left: 73%;
+    margin-top: -1.5rem;
+}
+
+/* === form styles === */
+
+.card-input label {
+    display: block;
+    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.1vw;
+}
+
+.card-input {
+    text-align: center;
+}
+
+.card-input input {
+    width: 70%;
+    padding: 0.6rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: #f8f8f8;
+    color: #333;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-input input::placeholder {
+    color: #aaa;
+}
+
+/* === background === */
+
+.main-desktop {
+    position: absolute;
+    top: -6vh;
+    left: -6vw;
+    bottom: -6vh;
+    z-index: -1;
+    min-height: 100vh;
+    margin-top: 5vh;
+}
+
+.main-desktop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.input-fields {
+    float: none;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    height: 100%;
+    margin-left: 12vw;
+    margin-right: auto;
+    max-width: min(37.5rem, 90vw);
+}
+
+/* === thank section ===*/
+
+.thk-text {
+    display: none;
+    position: absolute;
+    top: 43%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: var(--letters);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    width: 100%;
+    max-width: min(25rem, 90vw);
+}
+
+
+#thk-text.active {
+    display: block;
+}
+
+/* === date and cvc section === */
+
+.expiry-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.expiry-container label {
+    margin-left: 30%;
+}
+
+.expiry-container input {
+    width: 35%;
+    margin-right: -0.6rem;
+}
+
+.date-cvc-container {
+    display: flex;
+    width: min(31.25rem, 90vw);
+}
+
+.expiry-inputs {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.expiry-inputs input {
+    width: 34%;
+}
+
+.date-cvc-container>div:first-child {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expiry-container input:first-child {
+    margin-right: -3.9rem;
+}
+
+.date-cvc-container>div:last-child input {
+    width: 60%;
+    margin-right: 2.9rem;
+}
+
+.date-cvc-container>div {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cvc-card {
+    position: absolute;
+    top: 10.3rem;
+    margin-left: 28rem;
+}
+
+.name-user {
+    margin-left: 4.4rem;
+    margin-bottom: 0.2rem;
+}
+
+.name-date-cvc-container {
+    position: absolute;
+    bottom: -1.25rem;
+    left: 1.25rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* === toggle button === */
+
+.ru-label {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    font-size: 1.25rem;
+    z-index: 3;
+    color: var(--function);
+    cursor: pointer;
+}
+
+/* === error message === */
+
+.error-message {
+    color: var(--warning);
+    font-size: 0.8rem;
+    height: 0.9rem;
+    margin-top: 0.03rem;
+    margin-bottom: 0.03rem;
+}
+
+.input-table-name.invalid,
+.input-table-card.invalid,
+.input-table-month.invalid,
+.input-table-year.invalid,
+.input-table-cvc.invalid {
+    border-color: var(--warning);
+}
+
+.expiry-container .error-message {
+    margin-left: 5.6rem;
+}
+
+/* === continue button === */
+
+.continue-btn {
+    width: 72%;
+    background-color: var(--button);
+    color: var(--letters);
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 0.1vw;
+    box-sizing: border-box;
+    margin: var(--space-sm);
+}
+
+/* === confirm button ==== */
+
+.confirm-button {
+    width: 71%;
+    background-color: var(--button);
+    color: var(--letters);
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 0.1vw;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-right: 3.6rem;
+}
+
+/* === attribution === */
+
+.attribution {
+    font-size: 0.7rem;
+    text-align: center;
+    position: relative;
+    top: 17.5rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
