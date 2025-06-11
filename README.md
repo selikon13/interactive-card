@@ -1,5 +1,7 @@
 # **Interactive Card Details Form**
 
+Project link: https://interactive-card-swart.vercel.app/
+
 ## **Description**
 
 Interactive form for entering bank card data
@@ -26,7 +28,7 @@ Interactive form for entering bank card data
 ### 2. **Project launch (3 ways)**: 
    #### 1. Just open HTML file
    #### 2. Via Live Server (https://github.com/ritwickdey/vscode-live-server-plus-plus )
-- Install the Live Server extension for VS Code
+- Install the Live Server extension for VS Code (or any other code editor)
 - Right click on `index.html` ☞ "Open with Live Server"
 - Will automatically open in browser at `http://localhost:5000`
    
