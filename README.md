@@ -30,7 +30,7 @@ Interactive form for entering bank card data
 - Right click on `index.html` ☞ "Open with Live Server"
 - Will automatically open in browser at `http://localhost:5000`
    
-   #### 3. Via Python server
+#### 3. Via Python server
 - `python3 -m http.server 8000`
 
 Open in your browser: `http://localhost:8000`
