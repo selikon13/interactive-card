@@ -1,10 +1,10 @@
-# Interactive Card Details Form
+# **Interactive Card Details Form**
 
-## Description
+## **Description**
 
 Interactive form for entering bank card data
 
-## Features
+## **Features**
 
 1. 🔄 Real-time update map when entering data
 2. ✅ Field validation:
@@ -16,26 +16,26 @@ Interactive form for entering bank card data
 4. 📱 Fully responsive (from 320px to 4K)
 5. 🎨 Stylish design
 
-## ⚙️ Installation and configuration
+## ⚙️ **Installation and configuration**
 
-1. Clone repositories
+### 1. Clone repositories
 
 `git clone https://github.com/selikon13/interactive-card`
 `cd interactive-card`
 
-2. Project launch (3 ways):
-   1. Just open HTML file
-   2. Via Live Server
+### 2. **Project launch (3 ways)**: 
+   #### 1. Just open HTML file
+   #### 2. Via Live Server (https://github.com/ritwickdey/vscode-live-server-plus-plus )
 - Install the Live Server extension for VS Code
 - Right click on `index.html` ☞ "Open with Live Server"
 - Will automatically open in browser at `http://localhost:5000`
    
-   3. Via Python server
+   #### 3. Via Python server
 - `python3 -m http.server 8000`
 
 Open in your browser: `http://localhost:8000`
 
-### How to use
+### **How to use**
 
 1. Enter your card details into the form
 2. Watch them appear on a virtual map
@@ -43,11 +43,11 @@ Open in your browser: `http://localhost:8000`
 4. If validation is successful, you will see a success message
 5. Click "Continue" to refresh the page
 
-## 🌏 Switch language
+## 🌏 **Switch language**
 
 Press the "EN/RU" button in the upper right corner to change the interface language
 
-## 📸Screenshots
+## 📸**Screenshots**
 
 ### Desctop
 ![descktop](images/card-form-Desktop.jpeg)
@@ -55,7 +55,7 @@ Press the "EN/RU" button in the upper right corner to change the interface langu
 ### Mobile
 ![mobile](images/card-form-Mobile.jpeg)
 
-## 🛠 Technologies
+## 🛠 **Technologies**
 
 - Structure: HTML 
 - Style: CSS3 with custom properties (CSS variables)
@@ -63,7 +63,7 @@ Press the "EN/RU" button in the upper right corner to change the interface langu
 - Fonts: Space Grotesk (Google Fonts)
 - Adaptive: Descktop-first + media queries
 
-## Contacts
+## **Contacts**
 
 - Email: fnaffi095@gmail.com
 - GitHub: selikon13 (https://github.com/selikon13)
