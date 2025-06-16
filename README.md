@@ -52,10 +52,10 @@ Press the "EN/RU" button in the upper right corner to change the interface langu
 ## 📸**Screenshots**
 
 ### Desctop
-![descktop](images/card-form-Desktop.jpeg)
+![descktop](design/card-form-Desktop.jpeg)
 
 ### Mobile
-![mobile](images/card-form-Mobile.jpeg)
+![mobile](design/card-form-Mobile.jpeg)
 
 ## 🛠 **Technologies**
 
