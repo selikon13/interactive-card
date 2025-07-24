@@ -12,6 +12,8 @@ import {
     translateFormErrors
 } from './language.js';
 
+/* === update map UI when entering data === */
+
 const updateCardUI = () => {
     document.getElementById('name-user').textContent = (nameInput.value || 'JANE APPLESEED').toUpperCase();
     document.getElementById('number-card').textContent = numberInput.value || '0000 0000 0000 0000';
@@ -21,7 +23,12 @@ const updateCardUI = () => {
 
 let nameInput, numberInput, monthInput, yearInput, cvcInput, confirmBtn;
 
+/* === initializing form === */
+
 export function initForm() {
+
+/* === getting DOM elements === */
+
     nameInput = document.getElementById('cardholder-name-input');
     numberInput = document.getElementById('card-number-input');
     monthInput = document.getElementById('expiry-month-input');
@@ -47,6 +54,8 @@ export function initForm() {
         translateFormErrors(); // Update all form errors
     }
 
+    /* === event handlers for input fields === */
+
     nameInput.addEventListener('input', () => {
         nameInput.value = nameInput.value.replace(/[^a-zA-Z\s]/g, '').slice(0, 20);
         updateCardUI();
@@ -70,6 +79,8 @@ export function initForm() {
         });
     });
 
+/* === validation form submission === */
+
     confirmBtn.addEventListener('click', e => {
         e.preventDefault();
 
@@ -78,6 +89,8 @@ export function initForm() {
         clearError(monthInput, dateError);
         clearError(yearInput, dateError);
         clearError(cvcInput, cvcError);
+
+        /* === checking all fields === */
 
         let isValid = true;
 
@@ -105,6 +118,8 @@ export function initForm() {
             showError(cvcInput, 'error-cvc-invalid', cvcError);
             isValid = false;
         }
+
+        /* === success message === */
 
         if (isValid) {
             document.querySelector('.input-fields').style.display = 'none';
